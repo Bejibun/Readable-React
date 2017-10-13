@@ -1,0 +1,22 @@
+//CATEGORIES
+export const TYPES_CATEGORIES_GOT 				= 'CATEGORIES_GOT'
+
+//POSTS
+export const TYPES_POST_GOT 					= 'POST_GOT'
+export const TYPES_POST_ADDED 					= 'POST_ADDED'
+export const TYPES_POST_RESETTED 				= 'POST_RESETTED'
+export const TYPES_POST_EDITED	 				= 'POST_EDITED'
+export const TYPES_POST_DELETED 				= 'POST_DELETED'
+export const TYPES_POST_VOTED 					= 'POST_VOTED'
+export const TYPES_POSTS_GOT					= 'POSTS_GOT'
+export const TYPES_POSTS_BY_CATEGORY 			= 'POSTS_BY_CATEGORY'
+export const TYPES_POSTS_SORT_BY 				= 'POSTS_SORT_BY'
+
+
+//COMENTS
+export const TYPES_COMMENT_GOT 					= 'COMMENT_GOT'
+export const TYPES_COMMENT_ADDED 				= 'COMMENT_ADDED'
+export const TYPES_COMMENT_EDITED 				= 'COMMENT_EDITED'
+export const TYPES_COMMENT_DELETED 				= 'COMMENT_DELETED'
+export const TYPES_COMMENT_VOTED 				= 'COMMENT_VOTED'
+export const TYPES_COMMENTS_BY_POST 			= 'COMMENTS_BY_POST'
