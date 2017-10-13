@@ -16,12 +16,12 @@ export function getCommentsByPost (postId) {
 export function addComment ({body, author, parentId}) {
   return dispatch =>
     API
-      .post(`/comments`,{
+      .post(`/comments`, {
         id: uuidv4(),
-        parentId,
         timestamp: Date.now(),
         body,
-        author
+        author,
+        parentId
       })
       .then(response => response.data)
       .then(

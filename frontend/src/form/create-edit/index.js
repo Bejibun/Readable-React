@@ -54,7 +54,10 @@ class CreateEdit extends Component {
     return (
       <div>
         <SiteHeader params={this.props.match.params} />
-        <Divider horizontal>Edit Post</Divider>
+        {postId === null ? 
+          <Divider horizontal>Add Post</Divider>
+        : <Divider horizontal>Edit Post</Divider>
+        }
         <Container>
           <CreateEditForm
             categories={categories}

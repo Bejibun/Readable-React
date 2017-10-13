@@ -1,4 +1,3 @@
-import clone from 'clone'
 const clone = require('clone')
 
 let db = {}

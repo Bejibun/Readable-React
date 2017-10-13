@@ -139,7 +139,7 @@ const formikConfig = {
     setSubmitting(false)
     props.postId
       ? props.editPost({post: payload, postId: props.postId})
-      : props.addPost({post: payload})
+      : props.createPost({post: payload})
   }
 }
 

@@ -82,20 +82,20 @@ function add (token, post) {
 }
 
 function vote (token, id, option) {
-  return new Promise((res) => {
-    let posts = getData(token)
-    post = posts[id]
-    switch(option) {
-        case "upVote":
-            post.voteScore = post.voteScore + 1
-            break
-        case "downVote":
-            post.voteScore = post.voteScore - 1
-            break
-        default:
-            console.log(`posts.vote received incorrect parameter: ${option}`)
+  return new Promise(res => {
+    const posts = getData(token)
+    const post = posts[id]
+    switch (option) {
+      case 'upVote':
+        post.voteScore = post.voteScore + 1
+        break
+      case 'downVote':
+        post.voteScore = post.voteScore - 1
+        break
+      default:
+        console.log(`posts.vote received incorrect parameter: ${option}`)
     }
-    res(post)
+    resolve(post)
   })
 }
 

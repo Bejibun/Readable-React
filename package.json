@@ -16,7 +16,6 @@
     "build": "cd frontend && react-scripts build",
     "test": "cd frontend && react-scripts test --env=jsdom",
     "server-and-react": "concurrently -n \"server,react\" -c \"green,blue\" \"npm run server\" \"npm run react\"",
-    "heroku-postbuild": "npm run build",
     "lint": "prettier-eslint --write --no-semi --single-quote --no-bracket-spacing '{src,server,.storybook}/**/*.{js,json,css,scss}'"
   },
   "@std/esm": {
@@ -67,6 +66,6 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bejibun/issues"
+    "url": "https://github.com/Bejibun/Readable-React/issues"
   }
 }

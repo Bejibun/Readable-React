@@ -39,7 +39,7 @@ class PostAside extends Component {
             compact
             size='tiny'
             floated='right'
-            color='green'
+            color='blue'
             icon='thumbs outline up'
             onClick={() =>
               this.props.votePost({postId: post.id, vote: 'upVote'})}
@@ -61,18 +61,18 @@ class PostAside extends Component {
         </Segment>
         <Button.Group attached='bottom'>
           <Button
-            secondary
-            size='small'
-            icon='trash outline'
-            content='delete'
-            onClick={this.deletePost}
-          />
-          <Button
             primary
             size='small'
             icon='edit'
             content='edit'
             onClick={this.editPost}
+          />
+          <Button
+            secondary
+            size='small'
+            icon='trash outline'
+            content='delete'
+            onClick={this.deletePost}
           />
         </Button.Group>
       </Segment.Group>

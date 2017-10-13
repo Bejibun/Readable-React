@@ -4,7 +4,7 @@ import * as ACTIONS from 'src/actions/types'
 export function getCategories() {
 	return dispatch =>
 	API
-	.get(`/categories`)
+	.get('/categories')
 	.then(res => res.data)
 	.then (
 		data => dispatch(gotCategories(data.categories)),
@@ -15,3 +15,4 @@ export function getCategories() {
 function gotCategories(data) {
 	return {type: ACTIONS.TYPES_CATEGORIES_GOT,data}
 }
+ 

@@ -15,7 +15,7 @@ class PostComments extends Component {
         </Divider>
 
         {commentCount === 0 && (
-          <div>No comments yet. Be the first, add one below :)</div>
+          <div>-- No comments --</div>
         )}
 
         {comments.map((comment, index) => (
