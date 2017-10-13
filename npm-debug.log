@@ -7,8 +7,8 @@
 6 silly lifecycle udacity-react-nanodegree-readable@0.1.0~prestart: no script for prestart, continuing
 7 info lifecycle udacity-react-nanodegree-readable@0.1.0~start: udacity-react-nanodegree-readable@0.1.0
 8 verbose lifecycle udacity-react-nanodegree-readable@0.1.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle udacity-react-nanodegree-readable@0.1.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/fransk/Desktop/udacity-react-nanodegree-readable-master/node_modules/.bin:/usr/local/bin:/Users/fransk/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-10 verbose lifecycle udacity-react-nanodegree-readable@0.1.0~start: CWD: /Users/fransk/Desktop/udacity-react-nanodegree-readable-master
+9 verbose lifecycle udacity-react-nanodegree-readable@0.1.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/fransk/Documents/Work/Udacity/React 2 Readable Git/node_modules/.bin:/usr/local/bin:/Users/fransk/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+10 verbose lifecycle udacity-react-nanodegree-readable@0.1.0~start: CWD: /Users/fransk/Documents/Work/Udacity/React 2 Readable Git
 11 silly lifecycle udacity-react-nanodegree-readable@0.1.0~start: Args: [ '-c', 'npm run server-and-react' ]
 12 silly lifecycle udacity-react-nanodegree-readable@0.1.0~start: Returned: code: 1  signal: null
 13 info lifecycle udacity-react-nanodegree-readable@0.1.0~start: Failed to exec start script
@@ -23,7 +23,7 @@
 14 verbose stack     at maybeClose (internal/child_process.js:877:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid udacity-react-nanodegree-readable@0.1.0
-16 verbose cwd /Users/fransk/Desktop/udacity-react-nanodegree-readable-master/server
+16 verbose cwd /Users/fransk/Documents/Work/Udacity/React 2 Readable Git
 17 error Darwin 16.7.0
 18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 19 error node v6.5.0
