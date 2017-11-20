@@ -6,8 +6,8 @@ import {filter, isEmpty} from 'lodash'
 import yup from 'yup'
 import {Button, Form, Segment, TextArea, Message} from 'semantic-ui-react'
 import {
-  addComment,
-  editComment
+  addCommentOnPost,
+  editCommentOnPost
 } from 'src/actions/comments'
 
 class CreateCommentForm extends Component {
@@ -99,12 +99,12 @@ const formikConfig = {
   handleSubmit: (payload, {props, setSubmitting, resetForm}) => {
     const createComment = ({body, author}) => {
       const parentId = props.post.id
-      return props.addComment({body, author, parentId})
+      return props.addCommentOnPost({body, author, parentId})
     }
 
     const editComment = ({body, author}) => {
       const id = props.commentId
-      return props.editComment({body, author, id})
+      return props.editCommentOnPost({body, author, id})
     }
 
     if (isEmpty(props.defaults)) {
@@ -129,7 +129,7 @@ const formikConfig = {
 }
 
 const mapStateToProps = ({post}) => ({post})
-const mapDispatchToProps = {addComment, editComment}
+const mapDispatchToProps = {addCommentOnPost, editCommentOnPost}
 const enhance = compose(
   connect(mapStateToProps, mapDispatchToProps),
   Formik(formikConfig)

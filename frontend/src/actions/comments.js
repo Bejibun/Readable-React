@@ -13,7 +13,7 @@ export function getCommentsByPost (postId) {
       )
 }
 
-export function addComment ({body, author, parentId}) {
+export function addCommentOnPost ({body, author, parentId}) {
   return dispatch =>
     API
       .post(`/comments`, {
@@ -30,10 +30,10 @@ export function addComment ({body, author, parentId}) {
       )
 }
 
-export function editComment ({commentId, body, author}) {
+export function editCommentOnPost ({id, body, author}) {
   return dispatch =>
     API
-      .put(`/comments/${commentId}`, {body, author})
+      .put(`/comments/${id}`, {body, author})
       .then(response => response.data)
       .then(
         data => dispatch(commentEdited(data)),
@@ -41,7 +41,7 @@ export function editComment ({commentId, body, author}) {
       )
 }
 
-export function deleteComment ({commentId}) {
+export function deleteCommentOnPost ({commentId}) {
   return dispatch =>
     API
       .delete(`/comments/${commentId}`)
@@ -67,19 +67,18 @@ function gotComments(data) {
   return {type: ACTIONS.TYPES_COMMENT_GOT, data}
 }
 
-function commentAdded(comment) {
-  return {type: ACTIONS.TYPES_COMMENT_ADDED, comment}
+function commentAdded(data) {
+  return {type: ACTIONS.TYPES_COMMENT_ADDED, data}
 }
 
-function commentEdited(comment) {
-  return {type: ACTIONS.TYPES_COMMENT_EDITED, comment}
+function commentEdited(data) {
+  return {type: ACTIONS.TYPES_COMMENT_EDITED, data}
 }
 
-function commentDeleted(comment) {
-  return {type: ACTIONS.TYPES_COMMENT_DELETED, comment}
+function commentDeleted(data) {
+  return {type: ACTIONS.TYPES_COMMENT_DELETED, data}
 }
 
-function commentVoted(comment) {
-  return {type: ACTIONS.TYPES_COMMENT_VOTED, comment}
+function commentVoted(data) {
+  return {type: ACTIONS.TYPES_COMMENT_VOTED, data}
 }
-

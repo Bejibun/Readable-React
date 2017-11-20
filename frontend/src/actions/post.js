@@ -55,7 +55,7 @@ export function votePost ({postId,vote}) {
       .post(`/posts/${postId}`, {option: vote})
       .then(response => response.data)
       .then(
-      	data => dispatch(postVoted(postId)),
+      	data => dispatch(postVoted(data)),
       	error => console.error(error))
 }
 

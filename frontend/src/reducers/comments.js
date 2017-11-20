@@ -9,7 +9,7 @@ function comments (state = [], action) {
       const newState = state.concat([action.data])
       return orderBy(newState, ['timestamp'], ['asc'])
     case ACTIONS.TYPES_COMMENT_EDITED:
-      const editPostIndex = findIndex(state, a => a.id === action.data.id)
+      const editPostIndex = findIndex(state, o => o.id === action.data.id)
       return [
         ...state.slice(0, editPostIndex),
         {...action.data},
@@ -18,7 +18,7 @@ function comments (state = [], action) {
     case ACTIONS.TYPES_COMMENT_DELETED:
       return state.filter(comment => comment.id !== action.data.id)
     case ACTIONS.TYPES_COMMENT_VOTED:
-      const votePostIndex = findIndex(state, a => a.id === action.data.id)
+      const votePostIndex = findIndex(state, o => o.id === action.data.id)
       return [
         ...state.slice(0, votePostIndex),
         {...action.data},

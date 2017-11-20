@@ -15,7 +15,7 @@ class PostComments extends Component {
         </Divider>
 
         {commentCount === 0 && (
-          <div>-- No comments --</div>
+          <div>-- No comment --</div>
         )}
 
         {comments.map((comment, index) => (

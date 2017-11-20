@@ -4,7 +4,7 @@ import * as ACTIONS from './types'
 export function getPosts () {
   return dispatch =>
     API
-      .get(`/posts/`)
+      .get(`/posts`)
       .then(response => response.data)
       .then(
       	data => dispatch(gotPosts(data)),
@@ -17,7 +17,7 @@ export function getPostsByCategory (category) {
       .get(`/${category}/posts`)
       .then(response => response.data)
       .then(
-      	data => dispatch(gotPostsByCategory(data)),
+      	data => dispatch(gotPostsByCategory(category,data)),
       	error => console.error(error))
 }
 
@@ -25,13 +25,10 @@ export function sortPosts (sortBy) {
   return {type: ACTIONS.TYPES_POSTS_SORT_BY, sortBy}
 }
 
-
-
 function gotPosts (data) {
   return {type: ACTIONS.TYPES_POSTS_GOT, data}
 }
 
-function gotPostsByCategory (data) {
+function gotPostsByCategory (category, data) {
   return {type: ACTIONS.TYPES_POSTS_BY_CATEGORY, data}
 }
-

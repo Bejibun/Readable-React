@@ -4,6 +4,7 @@ import * as ACTIONS from 'src/actions/types'
 function posts (state = [], action) {
   switch (action.type) {
     case ACTIONS.TYPES_POSTS_GOT:
+      return action.data
     case ACTIONS.TYPES_POSTS_BY_CATEGORY:
       return action.data
     case ACTIONS.TYPES_POSTS_SORT_BY:

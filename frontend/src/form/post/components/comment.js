@@ -4,7 +4,7 @@ import {Comment, Icon, Divider} from 'semantic-ui-react'
 import formatTimestamp from 'src/utils/format-timestamp'
 import CreateCommentForm from './comment-form'
 import {
-  deleteComment,
+  deleteCommentOnPost,
   voteOnComment
 } from 'src/actions/comments'
 
@@ -15,8 +15,8 @@ class PostComment extends Component {
     this.setState(prevState => ({edit: !prevState.edit}))
   }
 
-  deleteComment = commentId => {
-    this.props.deleteComment({commentId})
+  deleteCommentOnPost = commentId => {
+    this.props.deleteCommentOnPost({commentId})
   }
 
   upVoteComment = commentId => {
@@ -53,7 +53,7 @@ class PostComment extends Component {
               <Comment.Action onClick={() => this.toggleEdit()}>
                 <Icon disabled name='edit' />
               </Comment.Action>
-              <Comment.Action onClick={() => this.deleteComment(comment.id)}>
+              <Comment.Action onClick={() => this.deleteCommentOnPost(comment.id)}>
                 <Icon disabled name='trash outline' />
               </Comment.Action>
               <Comment.Action onClick={() => this.downVoteComment(comment.id)}>
@@ -73,7 +73,7 @@ class PostComment extends Component {
 
 const mapStateToProps = ({post, comments}) => ({post, comments})
 const mapDispatchToProps = {
-  deleteComment,
+  deleteCommentOnPost,
   voteOnComment
 }
 export default connect(mapStateToProps, mapDispatchToProps)(PostComment)

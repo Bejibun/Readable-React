@@ -15,4 +15,3 @@ export function getCategories() {
 function gotCategories(data) {
 	return {type: ACTIONS.TYPES_CATEGORIES_GOT,data}
 }
- 

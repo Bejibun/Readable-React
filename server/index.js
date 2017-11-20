@@ -15,6 +15,6 @@ app.listen(process.env.PORT, () =>
 )
 
 function serveApp (request, response) {
-  const file = path.join(path.join(__dirname, '../fontend/build/index.html'))
+  const file = path.join(path.join(__dirname, '../frontend/build/index.html'))
   response.status(200).sendFile(file)
 }
