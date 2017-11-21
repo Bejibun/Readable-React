@@ -77,10 +77,10 @@ function vote (token, id, option) {
     let comments = getData(token)
     comment = comments[id]
     switch(option) {
-        case "upVote":
+        case 'upVote':
             comment.voteScore = comment.voteScore + 1
             break
-        case "downVote":
+        case 'downVote':
             comment.voteScore = comment.voteScore - 1
             break
         default:
