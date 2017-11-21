@@ -4,17 +4,15 @@
 [![Standard][Standard]](http://standardjs.com)
 
 ## Usage
+To Run the project follow these steps (Install Node Module Package & Start) :
 
 ```bash
 npm install
 npm start
 ```
 
-A hosted version of this app can be found at https://react-nanodegree-readable.herokuapp.com
+This application is about adding a new post to specific category and we can comment the post. Some sorting method we add on for the posts we have been added. 
 
-## create-react-app
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
+Also, we have upVote and downVote for the comment and posts.
 
 [Standard]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
