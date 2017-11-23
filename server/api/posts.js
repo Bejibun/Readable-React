@@ -95,7 +95,7 @@ function vote (token, id, option) {
       default:
         console.log(`posts.vote received incorrect parameter: ${option}`)
     }
-    resolve(post)
+    res(post)
   })
 }
 

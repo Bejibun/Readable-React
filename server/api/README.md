@@ -102,4 +102,6 @@ Params:
 
 
 ### `DELETE /comments/:id`
-Sets a comment's deleted flag to 'true'  
+Sets a comment's deleted flag to 'true'
+
+at the root directory for the project and 'npm start' to run both the front-end and server
